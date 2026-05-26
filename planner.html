@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>«Остров Мечты» О нас</title>
+
+    <link href="styles/common.css" rel="stylesheet" type="text/css">
+    <link href="styles/planner.css" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <script src="scripts/jquery-4.0.0.js"></script>
+    <script defer src="scripts/planner.js"></script>
+
+</head>
+
+<body>
+
+<header id="header"> <!-- header.html --> </header>
+<script>$('#header').load('assets/header.html')</script>
+
+<main><div class="container">
+
+<div class="plan-container selected">
+    <div id="plan-selected" class="plan"></div>
+    <div id="plan-cost">
+        ИТОГО: 
+        <span class="num">0</span>
+    </div>
+</div>
+
+<div class="plan-container all">
+    <div id="tag-sorter"></div>
+    <div id="plan-all" class="plan"></div>
+</div>
+
+</div></main>
+
+<footer id="footer"> <!-- footer.html --> </footer>
+<script>$('#footer').load('assets/footer.html')</script>
+
+</body>
+
+</html>
