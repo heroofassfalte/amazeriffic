@@ -1,0 +1,9 @@
+.tickets {
+  min-width: 450px;
+}
+
+#koleso {
+  transition: transform 0.1s linear;
+  cursor: pointer;
+  transform-origin: 50% 43%;
+}

@@ -1,0 +1,183 @@
+.plan-container {
+  min-width: calc(50% - 80px);
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-container .plan {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 3px solid gray;
+  background: rgb(240, 240, 240);
+  border-radius: 40px;
+  padding: 10px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+#plan-cost {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 3px solid gray;
+  background: rgb(240, 240, 240);
+  border-radius: 40px;
+  font-size: 30px;
+  .num {
+    font-weight: bold;
+  }
+  .num::after {
+    content: "₽";
+  }
+}
+
+#tag-sorter {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 3px solid gray;
+  background: rgb(240, 240, 240);
+  border-radius: 40px;
+  min-height: 60px;
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  .tag {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.tag {
+  border: 1px solid var(--_tag-color);
+  background: color-mix(in srgb, var(--_tag-color) 40%, transparent);
+  color: color-mix(in srgb, var(--_tag-color) 40%, black);
+  padding: 5px 10px;
+  border-radius: 100px;
+}
+
+.plan-item {
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 30px;
+  display: flex;
+  background: rgba(233, 247, 250, 0.3);
+
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      margin: 3px 0;
+    }
+    .tags {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .cost {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .cost .num {
+      font-size: 30px;
+      margin-right: 40px;
+      min-width: 150px;
+      &::after {
+        content: "₽";
+      }
+    }
+    .cost .countControl {
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+      gap: 5px;
+      align-items: center;
+      button {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 12px 12px;
+      }
+      .plus {
+        background-image: url("../assets/plus.png");
+      }
+      .minus {
+        background-image: url("../assets/minus.png");
+      }
+    }
+  }
+  .control {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    button {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px 16px;
+    }
+    .up {
+      background-image: url("../assets/arrow-up.png");
+      border-radius: 10px 10px 0 0;
+    }
+    .down {
+      background-image: url("../assets/arrow-down.png");
+      border-radius: 0 0 10px 10px;
+    }
+    .add {
+      margin-top: auto;
+      border-radius: 10px;
+    }
+    .add[pos="add"] {
+      background-image: url("../assets/plus.png");
+    }
+    .add[pos="remove"] {
+      background-image: url("../assets/minus.png");
+    }
+  }
+}
+
+[tag] {
+  --_tag-color: black;
+}
+[tag="дети"] {
+  --_tag-color: rgb(156, 254, 179);
+}
+[tag="экстрим"] {
+  --_tag-color: red;
+}
+[tag="еда"] {
+  --_tag-color: orange;
+}
+[tag="фото"] {
+  --_tag-color: rgb(83, 35, 255);
+}
+[tag="аттракцион"] {
+  --_tag-color: rgb(255, 88, 208);
+}
+[tag="отдых"] {
+  --_tag-color: green;
+}
+[tag="шоу"] {
+  --_tag-color: turquoise;
+}
+[tag="семья"] {
+  --_tag-color: pink;
+}
