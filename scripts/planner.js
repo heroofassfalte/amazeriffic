@@ -1,6 +1,10 @@
 "use strict";
 
-$.getJSON("assets/tasklist.json', tasklist => {
+fetch('assets/tasklist.json')
+.then(response => {
+    if (!response.ok) throw new Error('Network error: ' + response.status);
+    return response.json();
+}).then(tasklist => {
 
 const $planAll = $('#plan-all')
 const $planSelected = $('#plan-selected')
@@ -131,4 +135,4 @@ tasklist.forEach(item => {
     $planAll.append($div)
 })
 
-}) // end getJSON
+}).catch(error => console.error('Error:', error)) // end getJSON
