@@ -1,6 +1,6 @@
 "use strict";
 
-$.getJSON('../assets/tasklist.json', tasklist => {
+$.getJSON("assets/tasklist.json', tasklist => {
 
 const $planAll = $('#plan-all')
 const $planSelected = $('#plan-selected')
